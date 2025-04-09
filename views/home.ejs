@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+    <h2>Welcome to My Blog</h2>
+    <p>A simple blog application built with Node.js, Express, and EJS</p>
+  </section>
+
+
+<section class="posts">
+  <% if (posts.length > 0) { %>
+    <% posts.forEach(post => { %>
+      <article class="post">
+        <h3><%= post.title %></h3>
+        <div class="post-meta">
+          <time datetime="<%= post.createdAt.toISOString() %>">
+            <%= post.createdAt.toLocaleDateString() %>
+          </time>
+        </div>
+        <div class="post-content">
+          <p><%= post.content %></p>
+        </div>
+        <div class="post-actions">
+          <a href="/posts/<%= post.id %>/edit" class="btn-edit">Edit</a>
+          <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="delete-form">
+            <button type="submit" class="btn-delete">Delete</button>
+          </form>
+        </div>
+      </article>
+    <% }) %>
+  <% } else { %>
+    <p class="no-posts">No posts yet. <a href="/posts/new">Create your first post!</a></p>
+  <% } %>
+</section>
+
+<%- include('partials/footer') %>
