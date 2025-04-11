@@ -30,6 +30,7 @@ Grace's Blog is a simple and elegant blog application built with **Node.js**, **
 ```
 git clone https://github.com/gracedigman/grace-s-blog-app.git
 cd grace-s-blog-app
+```
 
 2. Install dependencies:
 ```
