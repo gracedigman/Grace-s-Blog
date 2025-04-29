@@ -22,6 +22,12 @@ Grace's Blog is a simple and elegant blog application built with **Node.js**, **
 
 ---
 
+## 🚀 Live Demo
+
+Check out the live version [here](https://grace-s-blog.onrender.com)!
+
+---
+
 ## 💻 Getting Started
 
 1. Clone this repository:
